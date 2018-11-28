@@ -1,7 +1,7 @@
 import {Observable, Observer} from "rxjs";
 import {IMessage} from "../model/model";
 
-const url = "ws://192.168.178.20:3000/chat";
+const url = "ws://localhost:3000/chat";
 const ws = new WebSocket(url);
 
 export function observeChatroom(username: string, chatroom: string): Observable<any> {
