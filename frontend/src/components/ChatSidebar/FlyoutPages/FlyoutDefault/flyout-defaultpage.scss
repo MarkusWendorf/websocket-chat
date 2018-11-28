@@ -1,0 +1,49 @@
+@import "../../../../variables";
+
+.flyout__chat-rooms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  > a {
+    text-align: center;
+    padding: 3px 1rem;
+    color: #232323;
+    background-color: $whitish-grey;
+    border-radius: 4px;
+    margin: 3px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 8rem;
+    cursor: pointer;
+
+    &:hover {
+      color: $whitish-grey;
+      background-color: #232323;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.flyout__about {
+  list-style-type: none;
+  padding: 0;
+  margin: 2rem 0 0 0;
+
+  > li {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+
+  }
+}

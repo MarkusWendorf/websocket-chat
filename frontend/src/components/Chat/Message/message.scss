@@ -1,0 +1,65 @@
+@import "../../../variables";
+
+.message {
+  margin: 0.5rem;
+  max-width: 75%;
+  float: left;
+  clear: both;
+
+  &.own {
+    float: right;
+    color: white;
+  }
+
+  .message__body {
+    padding: 0.8rem;
+    border-radius: 1em 0 1em 0;
+    background-color: $whitish-grey;
+    color: #535353;
+    line-height: 1.5;
+  }
+
+  &.own .message__body {
+    background-color: $color-primary;
+    color: white;
+    border-radius: 0 1em 0 1em;
+  }
+
+  .message__meta {
+    display: flex;
+    align-items: baseline;
+    font-weight: 300;
+    color: $blackish-text;
+  }
+
+  &.own .message__meta {
+    color: white;
+  }
+
+  .message__from {
+    flex: 1;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    min-width: 4rem;
+    margin-right: 1rem;
+  }
+
+  .message__time {
+    font-size: 0.7em;
+    font-weight: 300;
+  }
+
+  .message__text {
+    font-size: 0.8em;
+    font-weight: 300;
+    line-height: 1.5em;
+  }
+
+  &:last-of-type {
+    margin-bottom: 4rem;
+  }
+}
+
+
+

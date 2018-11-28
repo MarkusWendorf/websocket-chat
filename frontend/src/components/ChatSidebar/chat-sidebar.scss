@@ -1,0 +1,97 @@
+@import "../../variables";
+@import "../../mixins";
+
+$sidebar-color: #5BC3A4;
+
+.chat-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  padding: 1rem 3rem 1rem 1rem;
+  background-image: $background-gradient;
+  box-shadow: 2px 3px 18px -3px rgba(0, 0, 0, 0.44);
+
+  .chat-sidebar__menu-button, .chat-sidebar__user-button {
+    color: white;
+    user-select: none;
+    cursor: pointer;
+    transition: color 0.2s;
+
+    > svg {
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      stroke-width: 3px;
+    }
+  }
+
+  .chat-sidebar__user-button > svg {
+    color: white;
+    stroke-width: 2px;
+  }
+
+  &.open {
+
+    .chat-sidebar__flyout {
+      transform: translateX(0%);
+    }
+  }
+}
+
+.chat-sidebar__current-room {
+  flex: 1;
+  text-align: center;
+
+  > span {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+  }
+}
+
+.chat-sidebar__flyout {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  padding: 1rem;
+  z-index: 999;
+  background: $sidebar-color;
+  transform-origin: 0 0;
+  transform: translateX(-100%);
+  transition: transform 0.5s cubic-bezier(0.33, 0.00, 0.00, 1.00);
+  box-shadow: 2px 3px 18px -3px rgba(0, 0, 0, 0.25);
+
+  h1 {
+    width: 100%;
+    color: white;
+    margin: 0.5rem 0;
+    letter-spacing: 1.5px;
+    text-align: center;
+  }
+}
+
+.chat-sidebar__flyout-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.chat-sidebar__logo {
+  flex: 1;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  cursor: pointer;
+}
+
+.chat-sidebar__content {
+  padding: 1rem;
+}
+

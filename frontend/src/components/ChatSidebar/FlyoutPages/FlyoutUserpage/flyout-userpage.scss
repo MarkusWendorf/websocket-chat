@@ -1,0 +1,47 @@
+
+.flyout-user__icon {
+  border: 2px solid;
+  border-radius: 100%;
+  display: flex;
+  color: white;
+  width: 3rem;
+  padding: 0.5rem;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem auto 2rem auto;
+}
+
+.flyout-user__form {
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.input-with-label {
+  display: block;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.input-with-label .label-text {
+  position: relative;
+  cursor: text;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  top: -4rem;
+  z-index: -1;
+}
+
+.input-with-label input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid;
+  font: inherit;
+  font-size: 1.2rem;
+  outline: 0;
+  color: inherit;
+  padding: 5px 20px;
+  text-align: center;
+  width: 12rem;
+}

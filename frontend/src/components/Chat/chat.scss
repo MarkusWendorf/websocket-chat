@@ -1,0 +1,78 @@
+@import "../../variables";
+@import "../../mixins";
+
+.chat {
+  display: flex;
+  flex-direction: column;
+
+  /* freakin firefox??
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(68, 68, 68, 0.2);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(68, 68, 68, 0.4);
+  }
+  */
+}
+
+.chat__messages {
+  // overflow-y: scroll;
+  padding: 1rem;
+  flex: 1;
+}
+
+.chat__input-form {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  left: 0;
+  bottom: 0;
+
+  &:focus-within {
+    background-color: rgba(184, 184, 184, 0.85);
+  }
+
+  .chat__text-input, .chat__send-button {
+    height: 2.5rem;
+    background-color: rgba(184, 184, 184, 0.35);
+    border: 1.5px solid $whitish-grey;
+    outline: 0;
+  }
+
+  .chat__text-input {
+    flex: 1;
+    border-bottom-left-radius: 1em;
+    padding-left: 1em;
+    color: black;
+    font-weight: 500;
+  }
+
+  .chat__send-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    border-top-right-radius: 1em;
+    border-left: 0;
+    padding: 0 10px;
+    cursor: pointer;
+    background-color: $whitish-grey;
+    color: $color-primary-light;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    svg {
+      width: 1.2rem;
+      height: 1.2rem;
+      stroke-width: 3;
+    }
+  }
+}

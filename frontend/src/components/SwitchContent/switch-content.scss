@@ -1,0 +1,20 @@
+
+.switch-content {
+  display: flex;
+}
+
+.switch-content__switch-element {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 100%;
+  margin-left: -100%;
+  float: left;
+  visibility: visible;
+  opacity: 1;
+
+  &.hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

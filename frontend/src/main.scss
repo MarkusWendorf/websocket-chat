@@ -1,0 +1,29 @@
+@import "variables";
+
+:root {
+  font-family: 'Prompt', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  background-image: $background-gradient;
+  background-size: cover;
+  width: 100%;
+  min-height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+}
+
+.main-panel {
+  position: relative;
+  padding-top: 4rem;
+}
