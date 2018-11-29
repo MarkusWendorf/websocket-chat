@@ -4,7 +4,6 @@ import MenuIcon from "../../icons/MenuIcon";
 import {GlobalState, StateContext} from "../../context/StateContext";
 import Flyout from "./Flyout";
 import {RouteComponentProps, withRouter} from "react-router";
-import {getChatroom} from "../../util/util";
 
 interface OwnProps {
 
@@ -81,5 +80,11 @@ class ChatSidebar extends React.Component<Props, State> {
 
     private historyUnsubscribe = () => { /* */ };
 }
+
+const getChatroom = (path: string): string => {
+    const regEx = new RegExp("^/chatrooms/(.*?)$");
+    const match = regEx.exec(path);
+    return match ? match[1] : "";
+};
 
 export default withRouter(ChatSidebar as React.ComponentType<Props>);
