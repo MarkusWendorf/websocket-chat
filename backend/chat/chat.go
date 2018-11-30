@@ -10,7 +10,7 @@ import (
 )
 
 type Chat struct {
-	lock        sync.RWMutex
+	lock        sync.Mutex
 	idCounter   int64
 	Connections map[string]*websocket.Conn // key == username
 	Chatrooms   map[string]*model.ChatRoom // key == room name
